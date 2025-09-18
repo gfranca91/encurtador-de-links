@@ -42,7 +42,7 @@ export default async function handler(
     }
 
     // Salva o novo link no banco de dados
-    const newLink = await prisma.link.create({
+    await prisma.link.create({
       data: {
         url: url,
         slug: slug,

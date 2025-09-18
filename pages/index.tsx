@@ -58,8 +58,12 @@ export default function HomePage() {
       // >>> Ponto 1 da Monetização: Anúncio Pop-up <<<
       // Abre uma nova aba com o anúncio. Substitua a URL pela do seu parceiro de anúncios.
       window.open("https://www.google.com", "_blank");
-    } catch (err: any) {
-      setError(err.message);
+    } catch (err) {
+      if (err instanceof Error) {
+        setError(err.message);
+      } else {
+        setError("Ocorreu um erro desconhecido.");
+      }
     } finally {
       // Garante que o estado de "carregando" seja desativado no final.
       setIsLoading(false);
