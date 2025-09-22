@@ -2,7 +2,6 @@
 
 import { useState, FormEvent } from "react";
 import Head from "next/head";
-import Script from "next/script";
 
 export default function HomePage() {
   // --- Estados do nosso componente ---
@@ -83,13 +82,6 @@ export default function HomePage() {
           content="Encurtador de links simples e monetizado"
         />
       </Head>
-
-      <Script
-        async
-        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8645025460170789"
-        crossOrigin="anonymous"
-        strategy="afterInteractive"
-      />
 
       <main className="flex flex-col items-center justify-center min-h-screen bg-gray-900 text-white p-4">
         <div className="w-full max-w-lg p-8 space-y-6 bg-gray-800 rounded-lg shadow-xl">
