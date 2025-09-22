@@ -2,6 +2,7 @@
 
 import { useState, FormEvent } from "react";
 import Head from "next/head";
+import Script from "next/script";
 
 export default function HomePage() {
   // --- Estados do nosso componente ---
@@ -54,10 +55,6 @@ export default function HomePage() {
 
       // --- SUCESSO! ---
       setShortUrl(data.shortUrl);
-
-      // >>> Ponto 1 da Monetização: Anúncio Pop-up <<<
-      // Abre uma nova aba com o anúncio. Substitua a URL pela do seu parceiro de anúncios.
-      window.open("https://www.google.com", "_blank");
     } catch (err) {
       if (err instanceof Error) {
         setError(err.message);
@@ -86,6 +83,13 @@ export default function HomePage() {
           content="Encurtador de links simples e monetizado"
         />
       </Head>
+
+      <Script
+        async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8645025460170789"
+        crossOrigin="anonymous"
+        strategy="afterInteractive"
+      />
 
       <main className="flex flex-col items-center justify-center min-h-screen bg-gray-900 text-white p-4">
         <div className="w-full max-w-lg p-8 space-y-6 bg-gray-800 rounded-lg shadow-xl">
@@ -144,11 +148,6 @@ export default function HomePage() {
               <p>{error}</p>
             </div>
           )}
-        </div>
-
-        {/* >>> Ponto 2 da Monetização: Anúncio em Banner <<< */}
-        <div className="w-full max-w-lg mt-8 h-24 bg-gray-700/50 flex items-center justify-center rounded-lg">
-          <p className="text-gray-500">[ Espaço para Anúncio em Banner ]</p>
         </div>
       </main>
     </>
