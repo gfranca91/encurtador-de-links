@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://encurtador-de-links-chi.vercel.app/sitemap.xml

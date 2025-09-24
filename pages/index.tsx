@@ -76,17 +76,32 @@ export default function HomePage() {
   return (
     <>
       <Head>
-        <title>Encurtador de Links</title>
+        {/* Título que aparece na aba e nos resultados de busca. Essencial! */}
+        <title>Encurtador de Link Grátis - Diminua e Personalize URLs</title>
+
+        {/* Descrição que aparece abaixo do título no Google. */}
         <meta
           name="description"
-          content="Encurtador de links simples e monetizado"
+          content="Encurte links longos de forma rápida e gratuita. Nossa ferramenta de encurtamento de URL é perfeita para redes sociais, marketing e para compartilhar links de maneira fácil."
+        />
+
+        {/* Palavras-chave relevantes (ajuda os robôs a entenderem o contexto) */}
+        <meta
+          name="keywords"
+          content="encurtador de link, encurtador de url, diminuir link, link curto, gerador de link curto, encurtador grátis"
+        />
+
+        {/* Ajuda a evitar conteúdo duplicado se você tiver um domínio próprio */}
+        <link
+          rel="canonical"
+          href="https://encurtador-de-links-chi.vercel.app/"
         />
       </Head>
 
       <main className="flex flex-col items-center justify-center min-h-screen bg-gray-900 text-white p-4">
         <div className="w-full max-w-lg p-8 space-y-6 bg-gray-800 rounded-lg shadow-xl">
           <h1 className="text-3xl font-bold text-center text-cyan-400">
-            Encurtador de Links
+            Encurtador de Link Grátis e Rápido
           </h1>
           <p className="text-center text-gray-400">
             Cole sua URL longa abaixo para gerar uma curta.
@@ -141,6 +156,34 @@ export default function HomePage() {
             </div>
           )}
         </div>
+        <section className="w-full max-w-lg mt-12 text-gray-400 text-left p-4">
+          <h2 className="text-2xl font-bold text-white mb-4">
+            O que é um Encurtador de Links?
+          </h2>
+          <p className="mb-4">
+            Um encurtador de links, ou encurtador de URL, é uma ferramenta
+            online que transforma um endereço web longo e complicado em um link
+            curto, fácil de lembrar e compartilhar. É ideal para postagens no
+            Twitter, Instagram, ou qualquer lugar onde o espaço é limitado.
+          </p>
+          <h3 className="text-xl font-bold text-white mb-2">
+            Vantagens de usar nossa ferramenta:
+          </h3>
+          <ul className="list-disc list-inside space-y-2">
+            <li>
+              <strong>Totalmente Gratuito:</strong> Crie quantos links curtos
+              precisar, sem custo.
+            </li>
+            <li>
+              <strong>Rápido e Fácil:</strong> Cole sua URL, clique em encurtar
+              e pronto!
+            </li>
+            <li>
+              <strong>Perfeito para Marketing:</strong> Links curtos são mais
+              atraentes em campanhas e materiais de divulgação.
+            </li>
+          </ul>
+        </section>
       </main>
     </>
   );
