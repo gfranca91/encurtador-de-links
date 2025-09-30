@@ -1,40 +1,137 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# 🚀 KitWebs - Link Shortener
 
-## Getting Started
+A web application to shorten long URLs into more manageable and shareable links. This project utilizes the Next.js Pages Router and requires a backend service to manage the links.
 
-First, run the development server:
+**➡️ Live Demo: [https://encurtador.kitwebs.com.br](https://encurtador.kitwebs.com.br)**
+
+---
+
+## ✨ Features
+
+- **URL Shortening:** Converts a long URL into a short, unique link.
+- **Redirection:** The generated short link redirects the user to the original long URL.
+- **Backend Integration:** Connects to an API to store and retrieve link mappings.
+
+---
+
+## 🛠️ Tech Stack
+
+This project was built using the following technologies:
+
+- **[Next.js](https://nextjs.org/)** - React Framework for production, using the **Pages Router**.
+- **[React](https://reactjs.org/)** - A JavaScript library for building user interfaces.
+- **[TypeScript](https://www.typescriptlang.org/)** - A typed superset of JavaScript.
+- **[Prisma](https://www.prisma.io/)** - Next-generation ORM for Node.js and TypeScript (if applicable).
+- **[Vercel](https://vercel.com/)** - Deployment and hosting platform for frontend and serverless functions.
+
+---
+
+## 🚀 Getting Started
+
+**1. Clone the repository**
+
+```bash
+git clone [https://github.com/gfranca91/encurtador-de-links.git](https://github.com/gfranca91/encurtador-de-links.git)
+```
+
+**2. Navigate to the project folder**
+
+```bash
+cd encurtador-de-links
+```
+
+**3. Install dependencies**
+
+```bash
+npm install
+```
+
+**4. Set up environment variables**
+
+- Create a `.env` file and add the necessary variables, such as `DATABASE_URL`.
+
+**5. Start the development server**
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+---
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## 📄 License
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+<br>
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
+# 🚀 KitWebs - Encurtador de Links
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Uma aplicação web para encurtar URLs longas em links mais gerenciáveis e compartilháveis. Este projeto utiliza o Pages Router do Next.js e requer um serviço de backend para gerenciar os links.
 
-## Deploy on Vercel
+**➡️ Acessar o Site: [https://encurtador.kitwebs.com.br](https://encurtador.kitwebs.com.br)**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+## ✨ Funcionalidades
+
+- **Encurtamento de URL:** Converte uma URL longa em um link curto e único.
+- **Redirecionamento:** O link curto gerado redireciona o usuário para a URL original.
+- **Integração com Backend:** Conecta-se a uma API para armazenar e recuperar os mapeamentos de links.
+
+---
+
+## 🛠️ Tecnologias Utilizadas
+
+Este projeto foi construído utilizando as seguintes tecnologias:
+
+- **[Next.js](https://nextjs.org/)** - Framework React para produção, utilizando o **Pages Router**.
+- **[React](https://reactjs.org/)** - Biblioteca para construção de interfaces.
+- **[TypeScript](https://www.typescriptlang.org/)** - Superset do JavaScript que adiciona tipagem estática.
+- **[Prisma](https://www.prisma.io/)** - ORM de nova geração para Node.js e TypeScript (se aplicável).
+- **[Vercel](https://vercel.com/)** - Plataforma de deploy e hospedagem para frontend e serverless functions.
+
+---
+
+## 🚀 Como Rodar o Projeto
+
+**1. Clone o repositório**
+
+```bash
+git clone [https://github.com/gfranca91/encurtador-de-links.git](https://github.com/gfranca91/encurtador-de-links.git)
+```
+
+**2. Navegue até a pasta do projeto**
+
+```bash
+cd encurtador-de-links
+```
+
+**3. Instale as dependências**
+
+```bash
+npm install
+```
+
+**4. Configure as variáveis de ambiente**
+
+- Crie um arquivo `.env` e adicione as variáveis necessárias, como a `DATABASE_URL`.
+
+**5. Inicie o servidor de desenvolvimento**
+
+```bash
+npm run dev
+```
+
+Abra [http://localhost:3000](http://localhost:3000) no seu navegador para ver o resultado.
+
+---
+
+## 📄 Licença
+
+Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.

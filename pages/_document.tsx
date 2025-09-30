@@ -4,10 +4,29 @@ export default function Document() {
   return (
     <Html lang="pt-br">
       <Head>
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/apple-touch-icon.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/favicon-32x32.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/favicon-16x16.png"
+        />
+        <link rel="manifest" href="/site.webmanifest" />
+        <link rel="shortcut icon" href="/favicon.ico" />
+
         <script
           async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8645025460170789"
-          crossOrigin="anonymous"
+          src="https://pagead2.googlesyndication.com/pagead/..."
         ></script>
       </Head>
       <body className="antialiased">

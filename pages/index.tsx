@@ -1,42 +1,22 @@
-// pages/index.tsx
-
 import { useState, FormEvent } from "react";
 import Head from "next/head";
 
 export default function HomePage() {
-  // --- Estados do nosso componente ---
-
-  // Guarda a URL longa que o usuário digita.
   const [longUrl, setLongUrl] = useState("");
-
-  // Guarda a URL curta que nossa API retorna.
   const [shortUrl, setShortUrl] = useState("");
-
-  // Controla o estado de "carregando" para o botão.
   const [isLoading, setIsLoading] = useState(false);
-
-  // Guarda mensagens de erro.
   const [error, setError] = useState("");
-
-  // --- Lógica para lidar com o envio do formulário ---
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
-    // Previne o comportamento padrão do formulário (que é recarregar a página)
     event.preventDefault();
-
-    // Reseta os estados antes de uma nova requisição
     setIsLoading(true);
     setShortUrl("");
     setError("");
-
-    // Validação simples no frontend
     if (!longUrl) {
       setError("Por favor, insira uma URL.");
       setIsLoading(false);
       return;
     }
-
     try {
-      // Faz a chamada para a nossa API (o backend que criamos no Passo 3)
       const response = await fetch("/api/shorten", {
         method: "POST",
         headers: {
@@ -48,11 +28,8 @@ export default function HomePage() {
       const data = await response.json();
 
       if (!response.ok) {
-        // Se a API retornar um erro (ex: URL inválida), nós o capturamos aqui.
         throw new Error(data.message || "Ocorreu um erro.");
       }
-
-      // --- SUCESSO! ---
       setShortUrl(data.shortUrl);
     } catch (err) {
       if (err instanceof Error) {
@@ -61,37 +38,30 @@ export default function HomePage() {
         setError("Ocorreu um erro desconhecido.");
       }
     } finally {
-      // Garante que o estado de "carregando" seja desativado no final.
       setIsLoading(false);
     }
   };
 
-  // Função para copiar a URL curta para a área de transferência
   const copyToClipboard = () => {
     navigator.clipboard.writeText(shortUrl);
     alert("URL copiada para a área de transferência!");
   };
 
-  // --- Estrutura Visual (JSX e Tailwind CSS) ---
   return (
     <>
       <Head>
-        {/* Título que aparece na aba e nos resultados de busca. Essencial! */}
         <title>Encurtador de Link Grátis - Diminua e Personalize URLs</title>
 
-        {/* Descrição que aparece abaixo do título no Google. */}
         <meta
           name="description"
           content="Encurte links longos de forma rápida e gratuita. Nossa ferramenta de encurtamento de URL é perfeita para redes sociais, marketing e para compartilhar links de maneira fácil."
         />
 
-        {/* Palavras-chave relevantes (ajuda os robôs a entenderem o contexto) */}
         <meta
           name="keywords"
           content="encurtador de link, encurtador de url, diminuir link, link curto, gerador de link curto, encurtador grátis"
         />
 
-        {/* Ajuda a evitar conteúdo duplicado se você tiver um domínio próprio */}
         <link
           rel="canonical"
           href="https://encurtador-de-links-chi.vercel.app/"
@@ -125,7 +95,6 @@ export default function HomePage() {
             </button>
           </form>
 
-          {/* Área de Resultado: URL Curta */}
           {shortUrl && (
             <div className="p-4 mt-4 text-center bg-gray-700 rounded-md">
               <p className="text-gray-300">Sua URL curta está pronta:</p>
@@ -149,7 +118,6 @@ export default function HomePage() {
             </div>
           )}
 
-          {/* Área de Resultado: Erro */}
           {error && (
             <div className="p-3 mt-4 text-center text-red-400 bg-red-900/50 rounded-md">
               <p>{error}</p>
